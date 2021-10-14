@@ -1,0 +1,112 @@
+<style>
+
+body {
+    counter-reset: part-counter 0;
+}
+
+h1 {
+    margin: 0 0 0 0;
+    font-family: 'Times New Roman', serif;
+    font-size: 40px;
+    padding: 5px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #0000ff;
+}
+
+.part {
+    margin: 0 0 0 0;
+    font-family: 'Impact';
+    font-size: 20px;
+    padding: 5px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #000000;
+    background: inherit;
+}
+
+.part:before {
+    counter-increment: part-counter;
+    content: "Part " counter(part-counter, upper-roman)": ";
+}
+
+h2 {
+    margin: 0 0 0 0;
+    font-family: 'Times New Roman', serif;
+    font-size: 36px;
+    padding: 5px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #0000ff;
+    background: inherit;
+
+}
+
+h2:before {
+    content: attr(data-nbr)". ";
+}
+
+
+h3 {
+    background: #E6EFFA;
+    font-family: 'Impact';
+    font-size: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0;
+
+}
+
+.title {
+    text-align: center; 
+    line-height: 48px;
+    font-size: 20px; 
+}
+
+.quote {
+    padding: 10px;
+    border: 1px groove gray;
+    background-color: rgb(202, 197, 198);
+}
+
+.impact {
+    font-family: 'Courier New';
+    font-size: 18px; 
+    line-height: 24px;
+}
+
+.impact:before {
+    content: attr(data-hdr)". ";
+    font-family: 'Impact';
+}
+
+p {
+    font-family: 'Courier New';
+    font-size: 18px; 
+    color: #000000;
+    line-height: 24px;
+}
+
+ul.a {
+    list-style-position: outside;
+    list-style-type: upper-alpha;
+    line-height: 2.0;
+  }
+
+.apa {
+    padding-left: 4em;
+    text-indent: -4em;
+    background: powderblue;
+    font-size: 18px;
+    line-height: 2.0;
+}
+
+.apa:before {
+    content: attr(data-author) " (" attr(data-date) "). ";
+}
+
+.apa:after {
+    content: ". Retrieved from: " attr(data-url);
+}
+
+</style>
